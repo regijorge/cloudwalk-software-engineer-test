@@ -1,12 +1,12 @@
 module.exports = class ReportEntity {
-  constructor(id, report) {
-    this.id = id
+  constructor(matchId, report) {
+    this.matchId = matchId
     this.report = report
   }
 
   get() {
     return {
-      id: this.id,
+      matchId: this.matchId,
       report: this.report
     }
   }
