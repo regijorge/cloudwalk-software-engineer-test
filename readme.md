@@ -267,7 +267,8 @@ Death report response example:
 Parameters:
 | sortBy  | reportType      | Coluna 3   |
 |---------|-----------------|------------|
-| death   | kill and death  | Sort by totalDeaths field  |
+| total   | kill and death  | Sort by total fields        |
+| player  | kill and death  | Sort by playerDeaths fields  |
 | world   | kill and death  | Sort by worldDeaths fields  |
 | self    | kill and death  | Sort by selfDeaths field  |
 | kill    | kill            | SOrt by totalKills field  |
