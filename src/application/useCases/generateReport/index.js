@@ -6,10 +6,7 @@ const generateDeathReport = require('./generateDeathReport')
 const getParsedLogsByMatch = require('./utils/getParsedLogsByMatch')
 
 module.exports = function generateReport(matchId, reportType, sortBy, parsedLogs) {
-  let filteredParsedLogs = parsedLogs
-  if (matchId) {
-    filteredParsedLogs = getParsedLogsByMatch(matchId, parsedLogs)
-  }
+  const filteredParsedLogs = getParsedLogsByMatch(matchId, parsedLogs)
 
   let report
   if (reportType == 'kill') {
