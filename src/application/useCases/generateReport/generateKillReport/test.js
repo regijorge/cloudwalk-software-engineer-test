@@ -24,9 +24,9 @@ describe('generateKillReport', () => {
 
   const players = ['Player1', 'Player2', 'Player3']
   const ranking = [
-    { player: 'Player1', totalKills: 2, totalDeaths: 0, worldDeaths: 0, selfDeaths: 2,  score: 2 },
-    { player: 'Player2', totalKills: 1, totalDeaths: 0, worldDeaths: 0, selfDeaths: 1,  score: 1 },
-    { player: 'Player3', totalKills: 0, totalDeaths: 2, worldDeaths: 0, selfDeaths: 0,  score: -2 },
+    { player: 'Player1', playerKills: 2, totalDeaths: 0, worldDeaths: 0, selfDeaths: 2, score: 2 },
+    { player: 'Player2', playerKills: 1, totalDeaths: 0, worldDeaths: 0, selfDeaths: 1, score: 1 },
+    { player: 'Player3', playerKills: 0, totalDeaths: 2, worldDeaths: 0, selfDeaths: 0, score: -2 },
   ]
 
   it('Should generate kill report correctly', () => {
@@ -35,10 +35,10 @@ describe('generateKillReport', () => {
     getRanking.mockReturnValue(ranking)
 
     const expectedReport = {
-      totalKills: killLogs.length,
-      totalDeaths: 2,
-      worldDeaths: 0,
-      selfDeaths: 3,
+      totalKills: 6,
+      playerKills: 3,
+      worldkills: 0,
+      selfKills: 3,
       totalPlayers: 3,
       players,
       ranking,

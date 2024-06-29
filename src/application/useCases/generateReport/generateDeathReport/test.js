@@ -25,12 +25,12 @@ describe('generateDeathReport', () => {
 
   const causes = ['MOD_SHOTGUN', 'MOD_RAILGUN']
   const ranking = [
-    { cause: 'MOD_SHOTGUN', totalDeaths: 2, worldDeaths: 0, selfDeaths: 2 },
-    { cause: 'MOD_RAILGUN', totalDeaths: 1, worldDeaths: 1, selfDeaths: 0 }
+    { cause: 'MOD_SHOTGUN', totalDeaths: 2, playerDeaths: 0, worldDeaths: 0, selfDeaths: 2 },
+    { cause: 'MOD_RAILGUN', totalDeaths: 1, playerDeaths: 0, worldDeaths: 1, selfDeaths: 0 }
   ]
 
   it('Should generate death report correctly', () => {
-    const sortBy = 'death'
+    const sortBy = 'total'
 
     getParsedLogsByEvent.mockReturnValue(killLogs)
     getPlayers.mockReturnValue(causes)
@@ -38,6 +38,7 @@ describe('generateDeathReport', () => {
 
     const expectedReport = {
       totalDeaths: 3,
+      playerDeaths: 0,
       worldDeaths: 1,
       selfDeaths: 2,
       totalCauses: 2,

@@ -11,16 +11,17 @@ module.exports = function generateKillReport(parsedLogs, sortBy) {
   const totalPlayers = players.length
 
   const ranking = getRanking(players, killLogs, sortBy)
-  const totalKills = getRankingTotal('totalKills', ranking)
-  const totalDeaths = getRankingTotal('totalDeaths', ranking)
-  const worldDeaths = getRankingTotal('worldDeaths', ranking)
-  const selfDeaths = getRankingTotal('selfDeaths', ranking)
+  const playerKills = getRankingTotal('playerKills', ranking)
+  const worldkills = getRankingTotal('worldDeaths', ranking)
+  const selfKills = getRankingTotal('selfDeaths', ranking)
+
+  const totalKills = playerKills + worldkills + selfKills
 
   return {
     totalKills,
-    totalDeaths,
-    worldDeaths,
-    selfDeaths,
+    playerKills,
+    worldkills,
+    selfKills,
     totalPlayers,
     players,
     ranking

@@ -15,9 +15,15 @@ module.exports = async function generateReport(req, res) {
       sortBy = reportType === 'kill' ? 'score' : 'death'
     }
 
-    const allowedSortBy = ['kill', 'death', 'world', 'self', 'score']
-    if (!allowedSortBy.includes(sortBy)) {
-      return res.status(400).json({ message: 'sortBy should be either "kill", "death", "world", "self", or "score"' })
+    const allowedKillSortBy = ['kill', 'total', 'player', 'world', 'self', 'score']
+    if (reportType== 'kill' && !allowedKillSortBy.includes(sortBy)) {
+      return res.status(400).json({ message: `sortBy should be either 'kill', 'total', 'player', 'world', 'self', or 'score'` })
+    }
+
+
+    const allowedDeathSortBy = ['total', 'player', 'world', 'self']
+    if (reportType== 'death' && !allowedDeathSortBy.includes(sortBy)) {
+      return res.status(400).json({ message: `sortBy should be either 'total', 'player', 'world', or 'self'` })
     }
 
     const reportService = new ReportService(ParsedLogRepository)

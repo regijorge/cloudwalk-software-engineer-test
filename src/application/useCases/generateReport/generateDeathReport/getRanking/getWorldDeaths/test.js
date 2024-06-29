@@ -1,9 +1,9 @@
 const getWorldDeaths = require('./index')
 
 describe('getWorldDeaths', () => {
-  it('Should get totalDeaths', () => {
+  it('Should get playerDeaths', () => {
 
-    const totalDeaths = getWorldDeaths('MOD_GAUNTLET', [{ data: { killer: '<world>', victim: 'Player2', cause: 'MOD_GAUNTLET' } }])
-    expect(totalDeaths).toBe(1)
+    const playerDeaths = getWorldDeaths('MOD_GAUNTLET', [{ data: { killer: '<world>', victim: 'Player2', cause: 'MOD_GAUNTLET' } }])
+    expect(playerDeaths).toBe(1)
   })
 })

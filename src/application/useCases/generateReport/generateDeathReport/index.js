@@ -12,11 +12,13 @@ module.exports = function generateDeathReport(parsedLogs, sortBy) {
 
   const ranking = getRanking(causes, killLogs, sortBy)
   const totalDeaths = getRankingTotal('totalDeaths', ranking)
+  const playerDeaths = getRankingTotal('playerDeaths', ranking)
   const worldDeaths = getRankingTotal('worldDeaths', ranking)
   const selfDeaths = getRankingTotal('selfDeaths', ranking)
 
   return {
     totalDeaths,
+    playerDeaths,
     worldDeaths,
     selfDeaths,
     totalCauses,
