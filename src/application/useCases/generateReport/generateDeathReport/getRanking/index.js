@@ -22,7 +22,7 @@ module.exports = function getRanking(causes, killLogs, sortBy) {
       world: 'worldDeaths', 
       self: 'selfDeaths' 
     }
-    console.log({sortBy})
+
     const sortKey = sortKeys[sortBy]
     return ranking.sort((a, b) => b[sortKey] - a[sortKey])
   } catch (error) {
