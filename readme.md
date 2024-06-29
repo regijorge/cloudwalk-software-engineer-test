@@ -122,104 +122,35 @@ You can request two types of reports:
 Kill report response example:
 ```
 {
+  "matchId": "2",
   "report": {
-    "totalKills": 768,
-    "totalDeaths": 1008,
-    "worldDeaths": 240,
-    "selfDeaths": 61,
-    "totalPlayers": 10,
+    "totalKills": 11,
+    "playerKills": 1,
+    "worldkills": 8,
+    "selfKills": 2,
+    "totalPlayers": 2,
     "players": [
       "Isgalamido",
-      "Mocinha",
-      "Zeh",
-      "Dono da Bola",
-      "Assasinu Credi",
-      "Oootsimo",
-      "UnnamedPlayer",
-      "Maluquinho",
-      "Mal",
-      "Chessus"
+      "Mocinha"
     ],
     "ranking": [
       {
-        "player": "Isgalamido",
-        "totalKills": 178,
-        "totalDeaths": 144,
-        "worldDeaths": 40,
-        "selfDeaths": 9,
-        "score": 138
-      },
-      {
-        "player": "Zeh",
-        "totalKills": 154,
-        "totalDeaths": 169,
-        "worldDeaths": 34,
-        "selfDeaths": 4,
-        "score": 120
-      },
-      {
-        "player": "Oootsimo",
-        "totalKills": 132,
-        "totalDeaths": 121,
-        "worldDeaths": 24,
-        "selfDeaths": 6,
-        "score": 108
-      },
-      {
-        "player": "Assasinu Credi",
-        "totalKills": 123,
-        "totalDeaths": 170,
-        "worldDeaths": 32,
-        "selfDeaths": 20,
-        "score": 91
-      },
-      {
-        "player": "Dono da Bola",
-        "totalKills": 88,
-        "totalDeaths": 174,
-        "worldDeaths": 40,
-        "selfDeaths": 15,
-        "score": 48
-      },
-      {
-        "player": "Chessus",
-        "totalKills": 41,
-        "totalDeaths": 54,
-        "worldDeaths": 9,
-        "selfDeaths": 1,
-        "score": 32
-      },
-      {
         "player": "Mocinha",
-        "totalKills": 0,
-        "totalDeaths": 2,
+        "playerKills": 0,
+        "totalDeaths": 1,
+        "playerDeaths": 1,
         "worldDeaths": 0,
         "selfDeaths": 0,
         "score": 0
       },
       {
-        "player": "UnnamedPlayer",
-        "totalKills": 0,
-        "totalDeaths": 1,
-        "worldDeaths": 0,
-        "selfDeaths": 0,
-        "score": 0
-      },
-      {
-        "player": "Maluquinho",
-        "totalKills": 1,
-        "totalDeaths": 1,
-        "worldDeaths": 1,
-        "selfDeaths": 0,
-        "score": 0
-      },
-      {
-        "player": "Mal",
-        "totalKills": 51,
-        "totalDeaths": 172,
-        "worldDeaths": 60,
-        "selfDeaths": 6,
-        "score": -9
+        "player": "Isgalamido",
+        "playerKills": 1,
+        "totalDeaths": 10,
+        "playerDeaths": 0,
+        "worldDeaths": 8,
+        "selfDeaths": 2,
+        "score": -7
       }
     ]
   }
@@ -229,9 +160,10 @@ Kill report response example:
 Death report response example:
 ```
 {
-  "id": "2",
+  "matchId": "2",
   "report": {
-    "totalDeaths": 1,
+    "totalDeaths": 11,
+    "playerDeaths": 1,
     "worldDeaths": 8,
     "selfDeaths": 2,
     "totalCauses": 3,
@@ -242,20 +174,23 @@ Death report response example:
     ],
     "ranking": [
       {
-        "cause": "MOD_ROCKET_SPLASH",
-        "totalDeaths": 1,
-        "worldDeaths": 0,
-        "selfDeaths": 2
-      },
-      {
         "cause": "MOD_TRIGGER_HURT",
-        "totalDeaths": 0,
+        "totalDeaths": 7,
+        "playerDeaths": 0,
         "worldDeaths": 7,
         "selfDeaths": 0
       },
       {
+        "cause": "MOD_ROCKET_SPLASH",
+        "totalDeaths": 3,
+        "playerDeaths": 1,
+        "worldDeaths": 0,
+        "selfDeaths": 2
+      },
+      {
         "cause": "MOD_FALLING",
-        "totalDeaths": 0,
+        "totalDeaths": 1,
+        "playerDeaths": 0,
         "worldDeaths": 1,
         "selfDeaths": 0
       }
