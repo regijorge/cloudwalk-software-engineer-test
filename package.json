@@ -1,0 +1,21 @@
+{
+  "name": "cloudwalk-software-engineer-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "env-cmd jest",
+    "cli": "env-cmd node src/infrastructure/cli",
+    "api": "env-cmd node src/infrastructure/server",
+    "parseLogs": "node src/handlers/parseLog/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "commander": "^12.1.0",
+    "express": "^4.19.2",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
