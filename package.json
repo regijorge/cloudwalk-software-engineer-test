@@ -6,8 +6,7 @@
   "scripts": {
     "test": "env-cmd jest",
     "cli": "env-cmd node src/infrastructure/cli",
-    "api": "env-cmd node src/infrastructure/server",
-    "parseLogs": "node src/handlers/parseLog/index.js"
+    "api": "env-cmd node src/infrastructure/server"
   },
   "dependencies": {
     "axios": "^1.7.2",
